@@ -25,7 +25,6 @@ public class List {
 
     /** Returns the CharData of the first element in this list. */
     public CharData getFirst() {
-        // Your code goes here
         return first.cp;
     }
 
@@ -39,11 +38,13 @@ public class List {
     
     /** GIVE Textual representation of this list. */
     public String toString() {
-       Node current = first;
+       String str ="(";
+        Node current = first;
         while (current != null) {
-            current.toString();
+          str +=  current.toString();
+            current = current.next;
         }
-        return "";
+        return str + ")";
     }
 
     /** Returns the index of the first CharData object in this list
@@ -102,7 +103,7 @@ public class List {
      *  If the index is negative or is greater than the size of this list, 
      *  throws an IndexOutOfBoundsException. */
     public CharData get(int index) {
-        if(index < 0 || index > size){
+        if(index < 0 || index >= size){
             throw new IndexOutOfBoundsException(index + "is out of bounds");
 
         }
