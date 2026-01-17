@@ -113,7 +113,8 @@ calculateProbabilities(probs);
         }
         String generatedText = initialText;
         String strWindow = initialText.substring(initialText.length()-windowLength);
-        while(generatedText.length() <textLength){
+        int finalTargetLength = initialText.length() + textLength;
+        while(generatedText.length() <finalTargetLength){
            List probs = CharDataMap.get(strWindow);
             if(probs == null){
             return generatedText;
