@@ -18,7 +18,7 @@ public class List {
         size = 0;
     }
     
-    /** Returns the number of elements in this list. */
+    /** Returns the number of elements in this list.   */
     public int getSize() {
  	      return size;
     }
